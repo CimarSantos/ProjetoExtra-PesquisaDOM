@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa - Manipulação de DOM</title>
+
+    <meta name="description" content="Pesquisa sobre manipulação da DOM">
+    <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript">
+    <meta name="author" content="Francimar Santos">
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section class="topo flex" id="topo">
+        <a class="btn btn-dark flex" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        Tópicos
+      </a>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-body">
+
+                <div class="mt-3">
+                    <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que é DOM?</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que são objetos <span>window</span> e <span>document</span>?</button>
+                    </div>
+                    <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Diferença de <span>getElementById</span>, <span> getElementByClassName</span>, <span>querySelector</span> e <span>querySelectorAll</span> </button>
+                    </div>
+                    <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que é <span>Element</span> no Javascript</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Diferença de <span>innerHTML</span>, <span>innerText</span>, <span>textContent</span> </button>
+                    </div>
+                    <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Qual a diferença entre uma <span> NodeList </span> e uma array comum? Como transformar a <span> NodeList </span> em uma array? </button>
+                    </div>
+                    <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Como criar elementos via JavaScript com <span> document.createElement </span> e <span> element.appendChild </span> </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topico1-DOM corpo">
+        <hr>
+        <div class="title flex">
+            <h2>O que é DOM?</h2>
+        </div>
+        <div class="text">
+            <p>
+                <span> DOM </span> é a sigla em inglês para Document Object Model, que significa modelo de documento por objetos. Apesar de se tratar de um assunto complexo, ele já está embutido dentro dos navegadores. O que significa que a parte em que
+                os programadores têm acesso é bem mais simples e fácil de manipular.
+            </p>
+            <p>
+                É uma interface padronizada que permite que navegadores e scripts possam manipular o conteúdo de uma página web sem a necessidade de realizar atualizações e upgrades. É ele, ainda, que põe ordem na navegação web para que o conteúdo fique acessível a todos.
+            </p>
+            <p>
+                Ele é utilizado pelo navegador para representar a sua página Web. É ele que fornece uma <span class="show" onClick="showThree()"> representação estruturada </span> do documento como se fosse uma espécie de árvore com galhos, definindo
+                métodos para que possam ser alterados estrutura, estilo e conteúdo do documento.
+                <div class="three flex esconde">
+                    <img src="img/DOM.png" alt="DOM Three">
+                </div>
+            </p>
+            <p>
+                Esse é um assunto que certamente é de interesse de quem deseja ou já trabalha com:
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Front-End;</li>
+                    <li class="list-group-item">Javascript;</li>
+                    <li class="list-group-item">PWA;</li>
+                    <li class="list-group-item">Web App;</li>
+                    <li class="list-group-item">Frameworks modernos, como Vue.js, Angular e React. </li>
+                </ul>
+            </p>
+            <p>
+                Usa-se o DOM principalmente quando se deseja atualizar um website ou construir uma interface de usuário avançada. Com ele, é possível mover itens dentro de uma página ou criar efeitos CSS – sem nem mesmo precisar recarregar o site.
+            </p>
+        </div>
+    </section>
+
+    <footer class="flex">
+        <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
