@@ -31,21 +31,21 @@
 
                 <div class="mt-3">
                     <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que é DOM?</button>
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que são objetos <span>window</span> e <span>document</span>?</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic1()">O que é DOM?</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic2()">O que são objetos <span>window</span> e <span>document</span>?</button>
                     </div>
                     <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Diferença de <span>getElementById</span>, <span> getElementByClassName</span>, <span>querySelector</span> e <span>querySelectorAll</span> </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic3()">Diferença de <span>getElementById</span>, <span> getElementByClassName</span>, <span>querySelector</span> e <span>querySelectorAll</span> </button>
                     </div>
                     <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">O que é <span>Element</span> no Javascript</button>
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Diferença de <span>innerHTML</span>, <span>innerText</span>, <span>textContent</span> </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic4()">O que é <span>Element</span> no Javascript</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic5()">Diferença de <span>innerHTML</span>, <span>innerText</span>, <span>textContent</span> </button>
                     </div>
                     <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Qual a diferença entre uma <span> NodeList </span> e uma array comum? Como transformar a <span> NodeList </span> em uma array? </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic6()">Qual a diferença entre uma <span> NodeList </span> e uma array comum? Como transformar a <span> NodeList </span> em uma array? </button>
                     </div>
                     <div class="btn-group btn-group-lg flex" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-primary" onclick="topics()">Como criar elementos via JavaScript com <span> document.createElement </span> e <span> element.appendChild </span> </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="topic7()">Como criar elementos via JavaScript com <span> document.createElement </span> e <span> element.appendChild </span> </button>
                     </div>
 
                 </div>
@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <section class="topico1-DOM corpo">
+    <section class="topico1-DOM corpo esconde">
         <hr>
         <div class="title flex">
             <h2>O que é DOM?</h2>
@@ -87,11 +87,197 @@
                 Usa-se o DOM principalmente quando se deseja atualizar um website ou construir uma interface de usuário avançada. Com ele, é possível mover itens dentro de uma página ou criar efeitos CSS – sem nem mesmo precisar recarregar o site.
             </p>
         </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
     </section>
 
-    <footer class="flex">
-        <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
-    </footer>
+    <section class="topico2-winDocument corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>O que são os objetos window e document?</h2>
+        </div>
+        <div class="text">
+            <p>
+                Podemos denominar como o principal objeto da Javascript: o <span> objeto Window </span> e suas propriedades, assumindo o nível mais alto na hierarquia dos objetos disponíveis nessa lingugem.
+            </p>
+            <p>
+                O objeto window faz a manipulação das janelas do navegador. Sempre que abrirmos o navegador automaticamente esse objeto é gerado, isso acontece porque esse objeto representa exatamente essa janela que foi aberta. Para esse objeto ser criado não precisamos
+                usar nenhum tipo de linguagem, como HTML, pois isso é feito automaticamente pelo navegador. Esse objeto permite aos desenvolvedores criar e abrirem novas janelas de maneiras diferentes. Esses processos são possíveis através das propriedades
+                e métodos que o objeto window possui. Para utiliza-los basta seguirmos a seguinte sintaxe.
+
+                <ul>
+                    <li>window.propriedade</li>
+                    <li>window.metodo</li>
+                </ul>
+
+            </p>
+
+            <p>
+                As propriedades do objeto window tem como propósito modificar os aspectos em relação à janela do navegador e de suas frames, se existentes.
+            </p>
+
+            <span> Closed: </span> Esta propriedade tem a retorna um valor booleano indicando se a janela foi fechada. <br><br>
+            <span> DefaulStatus: </span> Com esta propriedade conseguimos definir uma mensagem padrão que será exibida na barra de status do navegador. <br><br>
+
+            <p>
+                Já a propriedade <span> Document </span> possui todas as características da página HTML, como por exemplo, cor das letras, cor do fundo, imagens que possamos utilizar como plano de fundo.
+            </p>
+
+            <h3>
+                O <span>objeto Document </span>
+            </h3>
+            <p>
+                Através do objeto document pode-se ter acesso a um grande número de propriedades. Segue abaixo algumas propriedades que podem ser utilizadas com o objeto document: <br><br>
+                <img src="img/Captura de tela de 2022-05-02 16-14-45.png" alt="" srcset="">
+            </p>
+
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+    <section class="topico3-diffGetQuery corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>Diferença de getElementById, getElementsByClassName, querySelector e querySelectorAll</h2>
+        </div>
+        <div class="text">
+            <p>
+                O método <span> getElementById() </span> retorna um elemento com o valor específico, selecionando o <span> ID </span> do elemento. Ele retorna <span> null </span> se este elemento não existir.
+                <br> Este é um dos métodos mais usados para manipular a DOM no HTML.
+            </p>
+            <p>
+                O método <span> getElementByClassName() </span> retorna uma coleção de elementos com um(s) nome(s) de classe especificado(s).
+            </p>
+            <p>
+                O método <span> querySelector() </span> retorna o primeiro elemento que corresponde a um seletor CSS, seja pela sua classe, ID ou Tag HTML.
+            </p>
+            <p>
+                O método <span> querySelectorAll() </span> retorna todos os elementos que correspondem a um(s) seletor(es) CSS e pode retornar também um <span>NodeList</span>. <br><br> Tanto o método <span>querySelector</span> quando o <span>querySelectorAll</span>                lançam uma exceção SYNTAX_ERR se os seletores forem inválidos.
+            </p>
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+    <section class="topico4-elementJavascript corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>O que é um Element no JavaScript?</h2>
+        </div>
+        <div class="text">
+            <p>
+                A interface <span> Element </span> é a classe base mais geral da qual todos os objetos em um Document herda. Ela somente tem métodos e propriedades comuns para todos os tipos de elementos. <br> Mais classes específicas herdam de Element.
+                Por exemplo, a interface <span> HTMLElement </span> é a interface base para elementos HTML, enquanto a interface <span> SVGElement </span> é a base para todos os elementos SVG. <br> A maioria das funcionalidades é especificada no <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element"
+                    target="_blank" rel="noopener noreferrer">MDN.</a>
+            </p>
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+    <section class="topico5-diffInnerTextContent corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>Diferença de innerHTML, innerText e textContent</h2>
+        </div>
+        <div class="text">
+            <p>
+                A diferença está no retorno deles: <br><br>
+
+                <span>innerHtml</span> retorna o texto, COM formatações e COM elementos html. <br>
+
+                <span>innerText</span> retorna somente o texto, sem formatações ou elementos html. <br>
+
+                <span>textContent</span> retorna o text COM formatações, mas sem os elementos html. <br>
+            </p>
+            <h3>Exemplo: </h3>
+            <p>
+                A propriedade <span>innerHtml</span> fornece uma forma simples de trocar completamente o conteúdo de um elemento. Por exemplo, o conteúdo inteiro do elemento body pode ser excluído ao fazer: <br><br>
+                <img src="img/Captura de tela de 2022-05-02 16-57-14.png" alt="" srcset="">
+            </p>
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+    <section class="topico6-diffNodeListArray corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>Qual a diferença entre uma NodeList e uma array comum?</h2>
+        </div>
+        <div class="text">
+            <p>
+                O <span> Nodelist </span> é um objeto semelhante a um <span> Array</span>, apenas semelhante e, portanto, métodos específicos para arrays não funcionarão no NodeList.
+            </p>
+            <p>
+                O tipo de um nodelist é igual a <span>object</span>, veja: <br><br>
+                <img src="img/Captura de tela de 2022-05-02 17-04-25.png" alt="" srcset="">
+            </p>
+            <hr>
+            <p>
+                Uma das características do NodeList é o fato dele ser dinâmico. Em outras palavras, sua lista pode variar à medida que o documento muda. <br> Por exemplo, você recupera os parágrafos de uma página e descobre que possui 20 desses elementos.
+                <br> E após inserir um novo parágrafo, você consulta o tamanho de sua NodeList e percebe que agora possui 21 parágrafos, como no exemplo: <br><br>
+                <img src="img/Captura de tela de 2022-05-02 17-07-06.png" alt="" srcset="">
+            </p>
+            <div class="title flex">
+                <h2>Como transformar a NodeList em uma array?</h2>
+            </div>
+            <div class="text">
+                <p>
+                    Aqui vemos uma abordagem de como converter NodeLists em arrays iteráveis:
+                </p>
+                <p>
+                    O bom e velho <span> for </span> sempre funciona, bom para usar quando precisa dar suporte em navegadores muito antigos: <br> <br>
+                    <img src="img/Captura de tela de 2022-05-02 17-12-10.png" alt="" srcset="">
+                </p>
+            </div>
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+    <section class="topico7-criarElementos corpo esconde">
+        <hr>
+        <div class="title flex">
+            <h2>Como criar elementos via JavaScript com document.createElement e element.appendChild</h2>
+        </div>
+        <div class="text">
+            <p>
+                A função <span> createElement() </span> irá criar um elemento HTML para ser, posteriormente, inserido em um documento HTML.
+                <br><br> Após a criação do elemento precisamos aplicar o método <span> appendChild() </span> para que o elemento seja, efetivamente, inserido ao documento HTML e fique visível ao usuário. <br> Além disso, precisamos definir um elemento
+                pai, ou seja, o elemento HTML que receberá o elemento recém criado como filho.
+                <img src="img/Captura de tela de 2022-05-02 17-21-51.png" alt="" srcset="">
+            </p>
+            <p>
+                Há um porém, o código acima irá inserir corretamente o título ao corpo do documento, só que não haverá título algum, pois apenas a tag <span> h1 </span> foi inserida, falta o texto. <br> Então, temos o resultado: <br>
+                <img src="img/Captura de tela de 2022-05-02 17-23-23.png" alt="" srcset="">
+            </p>
+            <p>
+                Para criar o texto utilizamos a função <span> createTextNode() </span> e também utilizaremos a função <span> appendChild() </span> para anexar o nó ao elemento em questão, resumidamente:
+                <img src="img/Captura de tela de 2022-05-02 17-25-29.png" alt="" srcset="">
+            </p>
+            <p>
+                Atualizando nosso código com o trecho acima, vamos ter: <br>
+                <img src="img/Captura de tela de 2022-05-02 17-26-28.png" alt="" srcset="">
+            </p>
+            <p>
+                Para então termos esse resultado: <br>
+                <img src="img/Captura de tela de 2022-05-02 17-27-23.png" alt="" srcset="">
+            </p>
+        </div>
+        <footer class="flex">
+            <a href="#topo"><i class="bi bi-layer-forward" ></i></a>
+        </footer>
+    </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
